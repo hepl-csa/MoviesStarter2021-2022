@@ -19,11 +19,11 @@ public class BLLManager
 
     public MovieDTO GetMovie(Func<MovieDTO, bool> predicate)
     {
-        return _dalManager.getMovies().FirstOrDefault(predicate);
+        return _dalManager.GetMovies().FirstOrDefault(predicate);
     }
 
     public IQueryable<MovieDTO>? GetMovies(Func<MovieDTO, bool> predicate)
     {
-        return _dalManager.getMovies().Where(predicate) as IQueryable<MovieDTO>;
+        return _dalManager.GetMovies().Where(predicate) as IQueryable<MovieDTO>;
     }
 }

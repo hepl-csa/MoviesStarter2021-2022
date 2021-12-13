@@ -35,7 +35,7 @@ public class DalManager
         _moviesContext.SaveChanges();
     }
 
-    public IQueryable<MovieDTO> getMovies()
+    public IQueryable<MovieDTO> GetMovies()
     {
         return _moviesContext.Movies.Select(movie =>
             new MovieDTO(movie.Id, movie.Title, movie.Actors.Select(actor => actor.toActorDTO()).ToList()));

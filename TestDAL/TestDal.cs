@@ -17,7 +17,7 @@ public class TestsDal
     [Test]
     public void TestInsert()
     {
-        _dalManager.inserMovie(new MovieDTO(1, "Démo", new List<ActorDTO>()));
+        _dalManager.InsertMovie(new MovieDTO(1, "Démo", new List<ActorDTO>()));
         Assert.Pass();
     }
 }

@@ -13,7 +13,7 @@ public class DalManager
         _moviesContext.Database.EnsureCreated();
     }
 
-    public void inserMovie(MovieDTO movieDto)
+    public void InsertMovie(MovieDTO movieDto)
     {
         Movie movie = new();
         

@@ -9,7 +9,7 @@ public class BLLManager
 
     public void InsertMovie(MovieDTO movieDto)
     {
-        _dalManager.inserMovie(movieDto);
+        _dalManager.InsertMovie(movieDto);
     }
 
     public IQueryable<MovieDTO>? GetMovies(int from, int to, Func<MovieDTO, bool> predicate)

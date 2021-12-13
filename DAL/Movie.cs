@@ -21,13 +21,13 @@ public class Movie
     {
     }
 
-    public MovieDTO toMovieDTO()
+    public MovieDTO ToMovieDto()
     {
         MovieDTO movieDto = new MovieDTO
         {
             Id = Id,
             Title = Title,
-            Actors = Actors.Select(actor => actor.toActorDTO()).ToList()
+            Actors = Actors.Select(actor => actor.ToActorDto()).ToList()
         };
 
         return movieDto;

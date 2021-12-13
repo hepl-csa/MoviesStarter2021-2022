@@ -12,6 +12,7 @@ public class MoviesContext : DbContext
     {
         optionsBuilder.UseNpgsql(@"Host=localhost;Database=movies2122;Username=postgres;Password=postgres");
     }
+    
 
 
     public DbSet<Actor> Actors { get; set; }

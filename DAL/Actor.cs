@@ -18,12 +18,12 @@ public class Actor
     {
     }
 
-    public ActorDTO toActorDTO()
+    public ActorDTO ToActorDto()
     {
         ActorDTO actorDto = new ActorDTO();
         actorDto.Id = Id;
         actorDto.Name = Name;
-        actorDto.Movies = Movies.Select(movie => movie.toMovieDTO()).ToList();
+        actorDto.Movies = Movies.Select(movie => movie.ToMovieDto()).ToList();
         return actorDto;
     }
 }

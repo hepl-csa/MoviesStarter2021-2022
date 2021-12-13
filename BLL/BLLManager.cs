@@ -5,7 +5,7 @@ namespace BLL;
 
 public class BLLManager
 {
-    private DalManager _dalManager = new DalManager();
+    private readonly DalManager _dalManager = new ();
 
     public void InsertMovie(MovieDTO movieDto)
     {
@@ -22,7 +22,7 @@ public class BLLManager
         return _dalManager.GetMovies().FirstOrDefault(predicate);
     }
 
-    public IQueryable<MovieDTO>? GetMovies(Func<MovieDTO, bool> predicate)
+    private IQueryable<MovieDTO>? GetMovies(Func<MovieDTO, bool> predicate)
     {
         return _dalManager.GetMovies().Where(predicate) as IQueryable<MovieDTO>;
     }

@@ -5,7 +5,7 @@ namespace DAL;
 
 public class DalManager
 {
-    private MoviesContext _moviesContext = new();
+    private readonly MoviesContext _moviesContext = new();
 
     public DalManager()
     {
@@ -37,6 +37,7 @@ public class DalManager
 
     public IQueryable<MovieDTO> GetMovies()
     {
+        // TODO : Warning includes for SQLite 
         return _moviesContext.Movies.Select(movie =>
             new MovieDTO(movie.Id, movie.Title, movie.Actors.Select(actor => actor.ToActorDto()).ToList()));
     }

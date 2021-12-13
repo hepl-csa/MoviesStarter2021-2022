@@ -14,9 +14,8 @@ public class Tests
     [SetUp]
     public void Setup()
     {
-        
     }
-    
+
 
     [Test]
     public void TestInserting()
@@ -28,9 +27,7 @@ public class Tests
         {
             Assert.Pass();
         }
-        else
-        {
-            Assert.Fail();
-        }
+
+        Assert.Fail();
     }
 }
